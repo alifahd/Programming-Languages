@@ -1,0 +1,20 @@
+#lang racket
+;Excercise 0
+(define (contains? items target)
+ (cond
+[(null? items) false]
+[(= (car items) target) true]
+[else (contains? (cdr items) target)]))
+(display "Testing contains?")
+(newline)
+(display "Expected: #t, actual: ")
+(contains? '(1 2 3 4 ) 1)
+(display "Expected: #t, actual: ")
+(contains? '(1 2 3 4 ) 3)
+(display "Expected: #t, actual: ")
+(contains? '(1 2 3 4 ) 4)
+(display "Expected: #f, actual: ")
+(contains? '(1 2 3 4 ) 7)
+(display "Expected: #f, actual: ")
+(contains? '() 1)
+(newline)

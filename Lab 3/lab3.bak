@@ -1,0 +1,6 @@
+#lang racket
+;Excersice 2
+(define m1(lambda (x y z) (x y z)))
+(define m2(lambda () 10))
+(define m3(lambda (x) x))
+(define m4(lambda (x y) x))
